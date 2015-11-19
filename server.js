@@ -2,33 +2,26 @@ var express     = require('express'),
     server      = express(),
     morgan      = require('morgan'),
     bodyParser  = require('body-parser'),
-    mongoose    = require('mongoose');
+    mongoose    = require('mongoose'),
+    Schema 		= mongoose.Schema;	
 
 
-// var itemSchema  = new Schema({
-//   todo_value: { type: String, required: true },
-//   created: { type: Date, default: Date.now }
-// });
-// var Item = mongoose.model('Item', itemSchema);
-
-server.use(express.static('/public'));
-
-server.set('views', './views');
-server.set('view engine', 'ejs'); 
-
-server.get('/', function (req, res) {
-  res.send('Hello World!');
+var postSchema  = new Schema({
+  	post_value: { type: String, required: true },
+    created: { type: Date, default: Date.now }
 });
 
+var Post = mongoose.model('Post', postSchema);
 
-//routes to Controllers
-var usersController = require('./controllers/users.js');
-server.use('/users', usersController);
+server.use(express.static('./public'));
 
-var postsController = require('./controllers/weather.js');
-server.use('/weather', weatherController);
-//anytime i go to anything inside posts, use my post controller
+// server.set('views', './views');
+// server.set('view engine', 'ejs'); 
 
+server.get('/test', function(req,res) {
+	res.write("Welcome to my fantastico app");
+	res.end();
+});
 
 
 // server.get('/items', function(request, response){
@@ -46,7 +39,8 @@ server.use('/weather', weatherController);
 //   });
 // });
 
-// mongoose.connect('mongodb://localhost:27017/todos');
-server.listen(3000, function(){
-  console.log("Server is up at 3000");
+
+mongoose.connect('mongodb://localhost:27017/marineWeather');
+server.listen(3001, function(){
+  console.log("Server is up at 3001");
 });
