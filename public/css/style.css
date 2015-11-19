@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+
 }
 
 #hourly-weather-box {
@@ -22,8 +24,9 @@ li {
 	background-size: cover;
 }
 
-#enter {
+.enter {
 	border: 2px white solid;
+	position: relative;	
 	width: 50%;
 	text-align: center;
 	padding: 5%;
@@ -31,10 +34,22 @@ li {
 	margin-left: 25%;
 }
 
+.enter:after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 9px;
+  left: 9px;
+  right: 9px;
+  bottom: 9px;
+  border: 2px solid white;
+}
+
 .enter-link {
 	color: white;
-	font-size: 3rem;
+	font-size: 4vw;
 	text-decoration: none;
+	margin: 0 auto;
 }
 
 /*media query section
