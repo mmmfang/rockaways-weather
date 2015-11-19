@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+}
+
+#hourly-weather-box {
+	border: 2px solid blue;
+	width: 22%;
+	float: left;
+	margin: 2%;
+	padding: 1%;
+}
+
+li {
+	list-style: none;
+}
+
+#index {
+	background-image: url('/images/Photo-Victor-Jakovlev.jpeg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#enter {
+	border: 2px white solid;
+	width: 50%;
+	text-align: center;
+	padding: 5%;
+	margin-top: 22%;
+	margin-left: 25%;
+}
+
+.enter-link {
+	color: white;
+	font-size: 3rem;
+	text-decoration: none;
+}
+
+/*media query section
+*/
+@media only screen and (min-width: 760px) {
+	height: 384px;
+}
+
+@media only screen and (min-width: 992px) {
+	height: 496px;
+	display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+	height: 600 px;
+	display: block;
+}

@@ -1,52 +1,16 @@
 <!DOCTYPE html>
-<html ng-app="marineWeatherApp">
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="/js/app.js" charset="utf-8"></script>
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <meta charset="utf-8">
-    <title>Surf Weather App</title>
-  </head>
- 
-  <body>
-    <div ng-controller="WeatherController as weather">
-      <h1>Weather App for the Beach 90th</h1>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="/js/app.js" charset="utf-8"></script>
 
-<h2>Weather for this date: {{weather.oneForecast.date | date:'MM/dd/yyyy'}}</h2>
-
-<h2>Hourly Weather</h2>
-
-<ul ng-repeat="forecast in weather.oneForecast.hourly">
-    <li ng-show="forecast.time==0">Time: midnight</li>
-    <li ng-show="forecast.time==300">Time: 3AM</li>
-    <li ng-show="forecast.time==600">Time: 6AM</li>
-    <li ng-show="forecast.time==900">Time: 9AM</li>
-    <li ng-show="forecast.time==1200">Time: 12noon</li>
-    <li ng-show="forecast.time==1500">Time: 3PM</li>
-    <li ng-show="forecast.time==1800">Time: 6PM</li>
-    <li ng-show="forecast.time==2100">Time: 9PM</li>
-
-
-    <li>swell height: {{forecast.swellHeight_m}}</li>
-    <li>wind direction:{{forecast.winddir16Point}}</li>
-    <li>wind speed:{{forecast.windspeedMiles}}</li>
-    <li>water temp:{{forecast.waterTemp_F}}</li>
-</ul>
-<!--   <input  type="text"
-          placeholder="enter your city"
-          ng-model="ctrl.city"
-          ng-submit="ctrl.getWeather()" /> <br>
-   <button ng-click="weather.getWeather()">Get Weather</button> -->
-<!--        <ul ng-repeat "w in weather.weatherObject"></ul>
-        <li>{{w.date}}</li>
-      </ul> -->
-<!--          <h3>Current Weather For: {{weather.data.weather}}</h2>
- -->
-<!--           <h4>Description: {{ctrl.weather.weather[0].description}}</h4>
-          <h4>Temp: {{ctrl.weather.main.temp | kelvinToFar | number:1}} </h4>
-          <h4>Humidity: {{ctrl.weather.main.humidity}} %</h4>
-          <h4>Pressure: {{ctrl.weather.main.pressure}} hpa </h4> -->
- </div> 
-    
-  </body>
+  <title>Surf's Up!</title>
+</head>
+<body id="index">
+  <div id="enter">
+    <a href="main.html" class="enter-link">Surf's Up</a>
+  </div>
+</body>
 </html>
