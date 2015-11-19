@@ -12,17 +12,25 @@
     <div ng-controller="WeatherController as weather">
       <h1>Weather App for the Beach 90th</h1>  
 
-<h2>Weather for Date</h2>
-<h2>date: {{weather.oneForecast.date}}</h2>
+<h2>Weather for this date: {{weather.oneForecast.date | date:'MM/dd/yyyy'}}</h2>
 
 <h2>Hourly Weather</h2>
 
 <ul ng-repeat="forecast in weather.oneForecast.hourly">
-    <li>exacthour in 24 hour time: {{forecast.time}}</li>
+    <li ng-show="forecast.time==0">Time: midnight</li>
+    <li ng-show="forecast.time==300">Time: 3AM</li>
+    <li ng-show="forecast.time==600">Time: 6AM</li>
+    <li ng-show="forecast.time==900">Time: 9AM</li>
+    <li ng-show="forecast.time==1200">Time: 12noon</li>
+    <li ng-show="forecast.time==1500">Time: 3PM</li>
+    <li ng-show="forecast.time==1800">Time: 6PM</li>
+    <li ng-show="forecast.time==2100">Time: 9PM</li>
+
+
     <li>swell height: {{forecast.swellHeight_m}}</li>
     <li>wind direction:{{forecast.winddir16Point}}</li>
     <li>wind speed:{{forecast.windspeedMiles}}</li>
-    <li>wateerTemp:{{forecast.waterTemp_F}}</li>
+    <li>water temp:{{forecast.waterTemp_F}}</li>
 </ul>
 <!--   <input  type="text"
           placeholder="enter your city"
@@ -38,7 +46,7 @@
           <h4>Temp: {{ctrl.weather.main.temp | kelvinToFar | number:1}} </h4>
           <h4>Humidity: {{ctrl.weather.main.humidity}} %</h4>
           <h4>Pressure: {{ctrl.weather.main.pressure}} hpa </h4> -->
- </div> -->
+ </div> 
     
   </body>
 </html>
