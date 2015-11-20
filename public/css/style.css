@@ -1,8 +1,8 @@
-* {
+/** {
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
 
-}
+}*/
 
 #hourly-weather-box {
 	border: 2px solid blue;
@@ -52,9 +52,17 @@ li {
 	margin: 0 auto;
 }
 
+
+/*GRID SYSTEM BY http://chrisnager.github.io/ungrid/
+*/
+/*@media (min-width: 30em) {
+    .row { width: 100%; display: table; table-layout: fixed; }
+    .col { display: table-cell; }
+}*/
+
 /*media query section
 */
-@media only screen and (min-width: 760px) {
+/*@media only screen and (min-width: 760px) {
 	height: 384px;
 }
 
@@ -67,3 +75,4 @@ li {
 	height: 600 px;
 	display: block;
 }
+*/

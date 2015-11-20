@@ -2,10 +2,17 @@
 <html ng-app="marineWeatherApp">
   <head>
     <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="/js/app.js" charset="utf-8"></script>
-    <meta charset="utf-8">
-    <title>Surf Weather App</title>
+    
   </head>
  
   <body>
@@ -16,21 +23,24 @@
 
       <h2>Hourly Weather</h2>
 
-        <ul id="hourly-weather-box" ng-repeat="forecast in weather.oneForecast.hourly">
-          <li ng-show="forecast.time==0">Time: midnight</li>
+        <div id="hourly-weather-box" class="col s4" ng-repeat="forecast in weather.oneForecast.hourly">
+          
+          <li ng-show="forecast.time==0">Time: Midnight</li>
           <li ng-show="forecast.time==300">Time: 3AM</li>
           <li ng-show="forecast.time==600">Time: 6AM</li>
           <li ng-show="forecast.time==900">Time: 9AM</li>
-          <li ng-show="forecast.time==1200">Time: 12noon</li>
+          <li ng-show="forecast.time==1200">Time: Noon</li>
           <li ng-show="forecast.time==1500">Time: 3PM</li>
           <li ng-show="forecast.time==1800">Time: 6PM</li>
           <li ng-show="forecast.time==2100">Time: 9PM</li>
 
+          <li>temp: {{forecast.tempF}} degrees F</li>
           <li>swell height: {{forecast.swellHeight_m}}</li>
           <li>wind direction:{{forecast.winddir16Point}}</li>
           <li>wind speed:{{forecast.windspeedMiles}}</li>
-          <li>water temp:{{forecast.waterTemp_F}}</li>
-        </ul>
+          <li>water temp: {{forecast.waterTemp_F}} degrees F</li>
+        
+        </div>
 
      </div>  
     </body>

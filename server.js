@@ -2,16 +2,17 @@ var express     = require('express'),
     server      = express(),
     morgan      = require('morgan'),
     bodyParser  = require('body-parser'),
-    mongoose    = require('mongoose'),
-    Schema 		= mongoose.Schema;	
+    MongoClient = require('mongodb').MongoClient,
+    // mongoose    = require('mongoose'),
+    // Schema 		  = mongoose.Schema;	
+    MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/marine_weather';
 
+// var postSchema  = new Schema({
+//   	post_value: { type: String, required: true },
+//     created: { type: Date, default: Date.now }
+// });
 
-var postSchema  = new Schema({
-  	post_value: { type: String, required: true },
-    created: { type: Date, default: Date.now }
-});
-
-var Post = mongoose.model('Post', postSchema);
+// var Post = mongoose.model('Post', postSchema);
 
 server.use(express.static('./public'));
 
@@ -40,7 +41,7 @@ server.get('/test', function(req,res) {
 // });
 
 
-mongoose.connect('mongodb://localhost:27017/marineWeather');
+MongoClient.connect('mongodb://localhost:27017/marine_weather');
 server.listen(3001, function(){
   console.log("Server is up at 3001");
 });
