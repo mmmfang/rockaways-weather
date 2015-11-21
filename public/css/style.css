@@ -1,19 +1,31 @@
-/** {
-	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
+h2, h3 {
+	color:white;
 
-}*/
+}
+#enter-text{
+	font-family: 'Open Sans', sans-serif;
+}
 
 #hourly-weather-box {
-	border: 2px solid blue;
-	width: 22%;
+	border: 4px solid white;
+
 	float: left;
 	margin: 2%;
-	padding: 1%;
+	padding: 3%;
+
 }
+
+#hourly-weather-box:hover {
+	opacity: .8;
+}
+
+/*.center {
+	text-align: center;
+}*/
 
 li {
 	list-style: none;
+
 }
 
 #index {
@@ -24,13 +36,22 @@ li {
 	background-size: cover;
 }
 
+#weather-page {
+	background-image: url('/images/Photo-by-David-Marcu.jpeg');
+	background-repeat: no-repeat;
+/*	background-image: url('/images/Photo-by-Clem-Onojeghuo.jpeg');*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
 .enter {
 	border: 2px white solid;
-	position: relative;	
+	position: absolute;
+	top: 50%;	
 	width: 50%;
 	text-align: center;
 	padding: 5%;
-	margin-top: 22%;
 	margin-left: 25%;
 }
 

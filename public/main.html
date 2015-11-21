@@ -12,34 +12,32 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="/js/app.js" charset="utf-8"></script>
-    
+
   </head>
  
-  <body>
+  <body id="weather-page">
     <div ng-controller="WeatherController as weather">
-      <h1>Weather App for Beach 90th</h1>  
+      <h2 class="center ">Rockaways at Beach 90th Street</h2>  
 
-      <h2>Weather Date: {{weather.oneForecast.date | date:'MM/dd/yyyy'}}</h2>
+      <h3 class="center">Hourly Weather for {{weather.oneForecast.date | date:'MM/dd/yyyy'}}</h2>
 
-      <h2>Hourly Weather</h2>
+        <div id="hourly-weather-box" class="col s4 card teal lighten-3" ng-repeat="forecast in weather.oneForecast.hourly">
+          <span class="card-title" ng-show="forecast.time==0">Time: Midnight</span>
+          <span class="card-title" ng-show="forecast.time==300">Time: 3AM</span>
+          <span class="card-title" ng-show="forecast.time==600">Time: 6AM</span>
+          <span class="card-title" ng-show="forecast.time==900">Time: 9AM</span>
+          <span class="card-title" ng-show="forecast.time==1200">Time: Noon</span>
+          <span class="card-title" ng-show="forecast.time==1500">Time: 3PM</span>
+          <span class="card-title" ng-show="forecast.time==1800">Time: 6PM</span>
+          <span class="card-title" ng-show="forecast.time==2100">Time: 9PM</span>
 
-        <div id="hourly-weather-box" class="col s4" ng-repeat="forecast in weather.oneForecast.hourly">
-          
-          <li ng-show="forecast.time==0">Time: Midnight</li>
-          <li ng-show="forecast.time==300">Time: 3AM</li>
-          <li ng-show="forecast.time==600">Time: 6AM</li>
-          <li ng-show="forecast.time==900">Time: 9AM</li>
-          <li ng-show="forecast.time==1200">Time: Noon</li>
-          <li ng-show="forecast.time==1500">Time: 3PM</li>
-          <li ng-show="forecast.time==1800">Time: 6PM</li>
-          <li ng-show="forecast.time==2100">Time: 9PM</li>
-
-          <li>temp: {{forecast.tempF}} degrees F</li>
-          <li>swell height: {{forecast.swellHeight_m}}</li>
-          <li>wind direction:{{forecast.winddir16Point}}</li>
-          <li>wind speed:{{forecast.windspeedMiles}}</li>
-          <li>water temp: {{forecast.waterTemp_F}} degrees F</li>
-        
+          <li>Temp: {{forecast.tempF}}° F</li>
+          <li>Water Temp: {{forecast.waterTemp_F}}° F</li>
+          <li>Swell Height: {{forecast.swellHeight_m}} m</li>
+          <li>Wind Direction: {{forecast.winddir16Point}}</li>
+          <li>Wind Speed: {{forecast.windspeedMiles}}</li>
+          <br/>
+          <button type="submit">Email me this forecast</button>
         </div>
 
      </div>  
