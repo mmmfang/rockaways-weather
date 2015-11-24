@@ -1,11 +1,12 @@
 var express     = require('express'),
     server      = express(),
+    PORT        = process.env.PORT || 5432,
     morgan      = require('morgan'),
     bodyParser  = require('body-parser'),
     MongoClient = require('mongodb').MongoClient,
     // mongoose    = require('mongoose'),
     // Schema 		  = mongoose.Schema;	
-    MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/marine_weather';
+    MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017';
 
 // var postSchema  = new Schema({
 //   	post_value: { type: String, required: true },
@@ -41,7 +42,10 @@ server.get('/test', function(req,res) {
 // });
 
 
-MongoClient.connect('mongodb://localhost:27017/marine_weather');
-server.listen(3001, function(){
-  console.log("Server is up at 3001");
+
+mongoClient.connect(MONGOURI + "/" + dbname);
+
+        
+server.listen(PORT, function() {
+    console.log("SERVER IS UP ON PORT", PORT);
 });
