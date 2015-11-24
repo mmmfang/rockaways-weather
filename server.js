@@ -4,6 +4,7 @@ var express     = require('express'),
     morgan      = require('morgan'),
     bodyParser  = require('body-parser'),
     MongoClient = require('mongodb').MongoClient,
+    dbname      = "marine_weather",
     // mongoose    = require('mongoose'),
     // Schema 		  = mongoose.Schema;	
     MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017';
@@ -42,8 +43,7 @@ server.get('/test', function(req,res) {
 // });
 
 
-
-mongoClient.connect(MONGOURI + "/" + dbname);
+MongoClient.connect(MONGOURI + "/" + dbname);
 
         
 server.listen(PORT, function() {
