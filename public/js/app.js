@@ -14,3 +14,12 @@ app.controller('WeatherController', ['$http', function($http) {
     		console.log("API not gotten");
     	})
 }]);
+
+app.controller('homepageController', function($scope) {
+    $scope.pageClass = 'page-home';
+});
+
+//app.controller('MapController', [$http, function($http){
+
+//}])
+

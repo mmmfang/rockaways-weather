@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Marine Weather</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   	<!--Import Google Icon Font-->
   	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,21 +12,17 @@
 	<!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
- 	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
  	<script src="/js/materialize.min.js" charset="utf-8"></script>
-
-  	<script src="/js/app.js" charset="utf-8"></script>
-
- 	<title>Surf's Up!</title>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM5FKpJJp9Q4-_wTf3x9r9euizcWqQ18o"></script>
 </head>
+<body>
 
-<body ng-controller="homepageController" class="page-home page" id="index">
-
-<a href="map.html">MAP LINK HEREHEHRERE</a>  
-  <div class="enter">
-     <a href="main.html" class="enter-link" id="enter-text">SURF'S UP</a>
-  </div>
+<div class="map-canvas">
+	
+</div>	
+    <script src="/js/map.js" charset="utf-8"></script>
 
 </body>
 </html>

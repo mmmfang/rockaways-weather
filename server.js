@@ -1,6 +1,6 @@
 var express     = require('express'),
     server      = express(),
-    PORT        = process.env.PORT || 5432,
+    PORT        = process.env.PORT || 3000,
     morgan      = require('morgan'),
     bodyParser  = require('body-parser'),
     MongoClient = require('mongodb').MongoClient,
@@ -9,7 +9,7 @@ var express     = require('express'),
     // Schema 		  = mongoose.Schema;	
     MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017';
 
-// var postSchema  = new Schema({
+// var weatherSchema  = new Schema({
 //   	post_value: { type: String, required: true },
 //     created: { type: Date, default: Date.now }
 // });
@@ -44,7 +44,6 @@ server.get('/test', function(req,res) {
 
 
 MongoClient.connect(MONGOURI + "/" + dbname);
-
         
 server.listen(PORT, function() {
     console.log("SERVER IS UP ON PORT", PORT);
