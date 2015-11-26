@@ -1,3 +1,9 @@
+ html, body { 
+ 	height: 100%; 
+ 	margin: 0; 
+ 	padding: 0; 
+}
+
 h3, h4, h5 {
 	color:white;
 	text-shadow: 1px 1px grey;
@@ -99,7 +105,7 @@ li {
 
 
 #map-canvas {
-	height: 75%;
+	height: 100%;
 }
 /*GRID SYSTEM BY http://chrisnager.github.io/ungrid/
 */
