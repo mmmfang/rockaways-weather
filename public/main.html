@@ -12,16 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    
-    <script src="/js/app.js" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>    
+    <script src="js/app.js" charset="utf-8"></script>
 
   </head>
  
   <body id="weather-page">
-    <div ng-controller="WeatherController as weather">
-      <h2 class="center ">Rockaways at Beach 90th Street</h2>  
+    <div ng-controller="WeatherController as weather" class="container">
+      <br/>
+      <h3 class="center ">Rockaways at Beach 90th Street</h3>  
 
-      <h3 class="center">Hourly Weather for {{weather.oneForecast.date | date:'MM/dd/yyyy'}}</h2>
+      <h5 class="center">Hourly Weather for {{weather.oneForecast.date | date:'MM/dd/yyyy'}}</h5>
 
         <div id="hourly-weather-box" class="col s4 card teal lighten-3" ng-repeat="forecast in weather.oneForecast.hourly">
           <span class="card-title" ng-show="forecast.time==0">Time: Midnight</span>
@@ -42,6 +43,6 @@
           <button type="submit">Email me this forecast</button>
         </div>
 
-     </div>  
-    </body>
+    </div>  
+  </body>
 </html>
