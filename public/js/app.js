@@ -2,7 +2,7 @@ var app = angular.module('marineWeatherApp', []);
 
 app.controller('WeatherController', ['$http', function($http) {
   var controller = this;
-    $http.get('https://api.worldweatheronline.com/free/v2/marine.ashx?key=' + WORLD_WEATHER_KEY + '&format=json&q=40.64,-73.76')
+    $http.get('/weather')
     	.success(function(data) {
       		controller.data = data; //returns whole shebang
       		controller.dataNest= data.data; //returns one object of 3 arrays- nearest area, request and weather 
