@@ -7,32 +7,12 @@
 h3, h4, h5 {
 	color:white;
 	text-shadow: 1px 1px grey;
-
 }
+
+/************ INDEX PAGE *************/
+
 #enter-text{
 	font-family: 'Open Sans', sans-serif;
-}
-
-#hourly-weather-box {
-	border: 4px solid white;
-
-	float: left;
-	margin: 2%;
-	padding: 3%;
-
-}
-
-#hourly-weather-box:hover {
-	opacity: .8;
-}
-
-/*.center {
-	text-align: center;
-}*/
-
-li {
-	list-style: none;
-
 }
 
 #index {
@@ -43,15 +23,6 @@ li {
 	background-size: cover;
 }
 
-#weather-page {
-	background-image: url('/images/Photo-by-David-Marcu.jpeg');
-	background-repeat: no-repeat;
-/*	background-image: url('/images/Photo-by-Clem-Onojeghuo.jpeg');*/
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
-}
 .enter {
 	border: 2px white solid;
 	position: absolute;
@@ -80,7 +51,43 @@ li {
 	margin: 0 auto;
 }
 
+/************ WEATHER PAGE *************/
 
+#weather-page {
+	background-image: url('/images/Photo-by-David-Marcu.jpeg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#hourly-weather-box {
+	border: 4px solid white;
+	float: left;
+	margin: 2%;
+	padding: 3%;
+}
+
+#hourly-weather-box:hover {
+	opacity: .8;
+}
+
+li {
+	list-style: none;
+}
+
+.hidden {
+	color: transparent;
+}
+
+/************ MAP PAGE *************/
+
+#map-canvas {
+	height: 100%;
+}
+
+
+/*NG-ANIMATE STUFF THAT ISN'T WORKING
 .page.ng-leave 	{ z-index:9999; }
 
 .page-home.ng-leave		{ 
@@ -89,7 +96,7 @@ li {
 	animation:slideInUp 0.5s both ease-in;  
 }
 
-/* slide in from the bottom */
+slide in from the bottom 
 @keyframes slideInUp {
 	from 	{ transform:translateY(100%); }
 	to 		{ transform: translateY(0); }
@@ -103,30 +110,4 @@ li {
 	to 		{ -webkit-transform: translateY(0); }
 }
 
-
-#map-canvas {
-	height: 100%;
-}
-/*GRID SYSTEM BY http://chrisnager.github.io/ungrid/
-*/
-/*@media (min-width: 30em) {
-    .row { width: 100%; display: table; table-layout: fixed; }
-    .col { display: table-cell; }
-}*/
-
-/*media query section
-*/
-/*@media only screen and (min-width: 760px) {
-	height: 384px;
-}
-
-@media only screen and (min-width: 992px) {
-	height: 496px;
-	display: block;
-}
-
-@media only screen and (min-width: 1200px) {
-	height: 600 px;
-	display: block;
-}
 */

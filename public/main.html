@@ -19,7 +19,7 @@
   <body id="weather-page">
     <div ng-controller="WeatherController as weather" class="container">
       <br/>
-      <h3 class="center ">Rockaways at Beach 90th Street</h3>  
+      <h3 class="center">Rockaways at Beach 90th Street</h3>  
 
       <h5 class="center">Hourly Weather for {{weather.oneForecast.date | date:'MM/dd/yyyy'}}</h5>
 
@@ -32,14 +32,15 @@
           <span class="card-title" ng-show="forecast.time==1500">Time: 3PM</span>
           <span class="card-title" ng-show="forecast.time==1800">Time: 6PM</span>
           <span class="card-title" ng-show="forecast.time==2100">Time: 9PM</span>
-
+         <ul> 
           <li>Temp: {{forecast.tempF}}° F</li>
           <li>Water Temp: {{forecast.waterTemp_F}}° F</li>
           <li>Swell Height: {{forecast.swellHeight_m}} m</li>
           <li>Wind Direction: {{forecast.winddir16Point}}</li>
-          <li>Wind Speed: {{forecast.windspeedMiles}}</li>
+          <li>Wind Speed: {{forecast.windspeedMiles}} mph</li>
           <br/>
-          <button type="submit">Email me this forecast</button>
+          <li class="hidden">Email me this forecast OK</li>
+         </ul>        
         </div>
 
     </div>  
