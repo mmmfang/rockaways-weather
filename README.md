@@ -1,6 +1,8 @@
 #How's the Water?
 A Marine Weather App
 
+Link: https://marine-weather.herokuapp.com
+
 Find out the water temperature and swell for your next surf, swim or boating session!
 
 * Technologies Used: NodeJS and Express as server, Angular to render front-end, Materialize for CSS styling, external APIs - World Weather Online and Google Maps
