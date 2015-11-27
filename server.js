@@ -9,8 +9,7 @@ var express     = require('express'),
 
     // mongoose    = require('mongoose'),
     // Schema 		  = mongoose.Schema;
-    var dotenv = require('dotenv');
-    dotenv.load();	
+    var dotenv = require('dotenv').load();	
 
 // var weatherSchema  = new Schema({
 //   	post_value: { type: String, required: true },
