@@ -4,10 +4,13 @@ var express     = require('express'),
     morgan      = require('morgan'),
     bodyParser  = require('body-parser'),
     MongoClient = require('mongodb').MongoClient,
-    dbname      = "marine_weather",
-    // mongoose    = require('mongoose'),
-    // Schema 		  = mongoose.Schema;	
+    dbname      = "marine_weather"
     MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017';
+
+    // mongoose    = require('mongoose'),
+    // Schema 		  = mongoose.Schema;
+    var dotenv = require('dotenv');
+    dotenv.load();	
 
 // var weatherSchema  = new Schema({
 //   	post_value: { type: String, required: true },
