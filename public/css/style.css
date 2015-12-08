@@ -51,6 +51,11 @@ h3, h4, h5 {
 	margin: 0 auto;
 }
 
+.whitetext {
+	color:white;
+	font-family: 'Open Sans', sans-serif;
+}
+
 /************ WEATHER PAGE *************/
 
 #weather-page {
