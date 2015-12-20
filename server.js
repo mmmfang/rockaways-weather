@@ -19,9 +19,6 @@ var express     = require('express'),
 
 server.use(express.static('./public'));
 
-// server.set('views', './views');
-// server.set('view engine', 'ejs'); 
-
 server.get('/test', function(req,res) {
 	res.write("Welcome to my fantastico app");
 	res.end();
