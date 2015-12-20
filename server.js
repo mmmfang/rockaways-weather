@@ -10,7 +10,7 @@ var express     = require('express'),
     // Schema 		  = mongoose.Schema;
     var request = require('request');
     var dotenv = require('dotenv').load();	
-
+    var nodemailer = require("nodemailer");
 // var weatherSchema  = new Schema({
 //   	post_value: { type: String, required: true },
 //     created: { type: Date, default: Date.now }
