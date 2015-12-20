@@ -28,11 +28,12 @@
     </ng-map>
 </div>	
 
+<div class="map-form">
     <div class="panel-heading">
-        <h4 class="blacktext panel-title text-center">Save Your Locations</h4>
+        <h4 class="location-header center">Save Your Locations</h4>
     </div>
     <!-- Panel Body -->
-    <div class="row">
+    <div class="col s12 row">
         <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
         <form name ="addForm" novalidate>
             <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
@@ -42,16 +43,17 @@
             </div>
             <div class="input-field col s3">
                 <label for="latitude">Latitude</label>
-                <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
+                <input type="text" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
             </div>
             <div class="input-field col s3">
                 <label for="longitude">Longitude</label>
-                <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
+                <input type="text" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
             </div>
             <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
-            <button type="submit" ng-disabled="addForm.$invalid">Submit</button>
+            <button class="pad-left" type="submit" ng-disabled="addForm.$invalid">Submit</button>
         </form>
     </div>
+</div>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM5FKpJJp9Q4-_wTf3x9r9euizcWqQ18o&callback=initMap" async defer></script>
 

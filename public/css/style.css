@@ -91,6 +91,17 @@ li {
 	height: 75%;
 }
 
+.map-form {
+	/*background-color: lightblue;*/
+}
+
+h4.location-header {
+	color:grey;
+}
+
+.pad-left {
+	margin-left: 10px;
+}
 
 /*NG-ANIMATE STUFF THAT ISN'T WORKING
 .page.ng-leave 	{ z-index:9999; }
