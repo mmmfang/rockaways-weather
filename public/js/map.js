@@ -18,4 +18,6 @@ function placeMarkerAndPanTo(latLng, map) {
     map: map
   });
   map.panTo(latLng);
+  alert(latLng);
 }
+
