@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="marineWeatherApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Marine Weather</title>
@@ -12,11 +12,12 @@
 	<!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
- 	<script src="../bower_components/modernizr/bin/modernizr"></script>
-    <script src="../bower_components/angular-route/angular-route.js"></script>
+ 	<!--<script src="../bower_components/modernizr/bin/modernizr"></script>-->
  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
  	<script src="js/materialize.min.js" charset="utf-8"></script>
 	<script src="js/map.js" charset="utf-8"></script>
+	<script src="js/app.js" charset="utf-8"></script>
 
 
 
@@ -43,11 +44,11 @@
             </div>
             <div class="input-field col s3">
                 <label for="latitude">Latitude</label>
-                <input type="text" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
+                <input type="text" id="latitude" placeholder="39" value="39.500" ng-model="formData.latitude" readonly>
             </div>
             <div class="input-field col s3">
                 <label for="longitude">Longitude</label>
-                <input type="text" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
+                <input type="text" id="longitude" placeholder="-79" value="-79" ng-model="formData.longitude" readonly>
             </div>
             <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
             <button class="pad-left" type="submit" ng-disabled="addForm.$invalid">Submit</button>
