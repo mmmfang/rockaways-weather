@@ -11,7 +11,7 @@ var express     = require('express'),
     Schema 		  = mongoose.Schema;
     var request = require('request');
     var dotenv = require('dotenv').load();	
-    var nodemailer = require("nodemailer");
+    // var nodemailer = require("nodemailer");
 
 
 server.use(express.static('./public'));
