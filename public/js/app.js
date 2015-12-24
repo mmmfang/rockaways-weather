@@ -18,7 +18,49 @@ app.controller('homepageController', function($scope) {
     $scope.pageClass = 'page-home';
 });
 
-//app.controller('MapController', [$http, function($http){
+app.controller('LocaleController', ['$http', '$scope', function($http, $scope){
 
-//}])
+    // Initializes Variables
+    // ----------------------------------------------------------------------------
+    $scope.formData = {};
+    var coords = {};
+    var lat = 0;
+    var long = 0;
+
+    // Set initial coordinates to the Rockaways
+    $scope.formData.latitude = 40;
+    $scope.formData.longitude = -79;
+
+    // Functions
+    // ----------------------------------------------------------------------------
+    // Creates a new user based on the form fields
+    $scope.createLocale = function() {
+
+        //Grabs all of the text box fields
+        var localeData = {
+            locale: $scope.formData.locale,
+            latitude: $scope.formData.latitude,
+            longitude: $scope.formData.longitude
+        };
+
+        // var localeData = {
+        //     locale: $scope.formData.locale,
+        //     latitude: latitudeFromClick,
+        //     longitude: longitudeFromClick
+        // };
+
+        // Saves the user data to the db
+        $http.post('/locales', localeData)
+            .success(function (data) {
+
+                // Once complete, clear the form
+                $scope.formData.locale = "";
+                
+            })
+            .error(function (data) {
+                console.log('Error: ' + data);
+            });
+    };
+
+}])
 

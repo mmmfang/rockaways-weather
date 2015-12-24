@@ -4,7 +4,7 @@ var express     = require('express'),
     morgan      = require('morgan'),
     bodyParser  = require('body-parser'),
     methodOverride =require('method-override'),
-//    MongoClient = require('mongodb').MongoClient,
+//  MongoClient = require('mongodb').MongoClient,
     dbname      = "marine_weather",
     MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017';
     mongoose    = require('mongoose');
@@ -35,7 +35,7 @@ server.use('/weather', function(req, res) {
 
 //routes to controller
 var localesController = require('./controllers/locales.js');
-//server.use('/locales', localesController);
+server.use('/locales', localesController);
 
 
 // MongoClient.connect(MONGOURI + "/" + dbname);

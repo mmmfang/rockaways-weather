@@ -1,10 +1,10 @@
-
-//var map;
+var map;
+var latitudeFromClick, longitudeFromClick;
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    zoom: 4,
-    center: {lat: -25.363882, lng: 131.044922 }
+    zoom: 5,
+    center: {lat: 40, lng: -79 }
   });
 
   map.addListener('click', function(e) {
@@ -18,6 +18,11 @@ function placeMarkerAndPanTo(latLng, map) {
     map: map
   });
   map.panTo(latLng);
-  alert(latLng);
+  
+  $scope.latitudeFromClick = latLng.lat(); 
+  $scope.longitudeFromClick=latLng.lng();
+
+  alert($scope.latitudeFromClick);
+  alert($scope.longitudeFromClick);
 }
 
