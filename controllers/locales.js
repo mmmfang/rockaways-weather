@@ -29,7 +29,7 @@ router.post('/', function(req,res) {
 		if (err) {
 			console.log("error saving location to db")
 		} else {
-			res.json(req.body); //responding with the json of the new location 
+			res.json("req dot body is", req.body); //responding with the json of the new location 
 		}
 	})
 });
