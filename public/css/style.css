@@ -88,7 +88,7 @@ li {
 /************ MAP PAGE *************/
 
 #map-canvas {
-	height: 75%;
+	height: 100%;
 }
 
 .map-form {
@@ -103,7 +103,7 @@ h4.location-header {
 	margin-left: 10px;
 }
 
-/*NG-ANIMATE STUFF THAT ISN'T WORKING
+/*NG-ANIMATE STUFF THAT ISN'T WORKING SINCE DONT HAVE ANGULAR ROUTES
 .page.ng-leave 	{ z-index:9999; }
 
 .page-home.ng-leave		{ 
